@@ -11,7 +11,7 @@ model = pickle.load(open("flight price prediction model.joblib","rb")) #loading 
 st.set_page_config(page_title="Flight Price Prediction Application") #tab title
 
 #prediction function
-def predict_status(Airline, Source,	Destination, Total_Stops, Additional_Info, Date, Month,	Year, Arrival Hour,	Arrival Minute,	Departure Hour,	Departure Minute, Duration Min):
+def predict_status(Airline, Source, Destination, Total_Stops, Additional_Info, Date, Month, Year, Arrival Hour, Arrival Minute, Departure Hour, Departure Minute, Duration Min):
     input_data = np.array([[Airline, Source, Destination, Total_Stops, Additional_Info, Date, Month, Year, Arrival Hour, Arrival Minute, Departure Hour, Departure Minute, Duration Min]])
     #input_data = input_data.reshape(1,-1)
     prediction = model.predict(input_data)
