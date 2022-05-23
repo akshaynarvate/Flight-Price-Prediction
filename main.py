@@ -5,7 +5,7 @@ import pickle
 import warnings
 
 warnings.filterwarnings("ignore")
-model = pickle.load(open("flight price prediction model.joblib","rb")) #loading the created model
+model = joblib.load(open("flight price prediction model.joblib","rb")) #loading the created model
 
 
 st.set_page_config(page_title="Flight Price Prediction Application") #tab title
